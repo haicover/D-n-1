@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplicationduan1.LopDao.LoaispDao;
 import com.example.myapplicationduan1.LopModel.LoaiSanpham;
+import com.example.myapplicationduan1.QuanlyvsThongke.QuanlyspFragment;
 import com.example.myapplicationduan1.R;
 
 import java.util.List;
@@ -55,17 +56,17 @@ public class Lsp_Adapter extends RecyclerView.Adapter<Lsp_Adapter.LoaiSphoder>{
             holder.tv_nhacc.setText("Nhà Cung Cấp: " + loaiSanpham.getNhacc());
         }
         if (holder.tv_tenls.getText().toString().contains("N")) {
-            holder.tv_IDls.setTextColor(Color.GREEN);
-            holder.tv_tenls.setTextColor(Color.GREEN);
-            holder.tv_nhacc.setTextColor(Color.GREEN);
-        } else if (holder.tv_tenls.getText().toString().contains("A")) {
-            holder.tv_IDls.setTextColor(Color.RED);
-            holder.tv_tenls.setTextColor(Color.RED);
-            holder.tv_nhacc.setTextColor(Color.RED);
-        } else {
             holder.tv_IDls.setTextColor(Color.BLACK);
             holder.tv_tenls.setTextColor(Color.BLACK);
             holder.tv_nhacc.setTextColor(Color.BLACK);
+//        } else if (holder.tv_tenls.getText().toString().contains("A")) {
+//            holder.tv_IDls.setTextColor(Color.RED);
+//            holder.tv_tenls.setTextColor(Color.RED);
+//            holder.tv_nhacc.setTextColor(Color.RED);
+//        } else {
+//            holder.tv_IDls.setTextColor(Color.BLACK);
+//            holder.tv_tenls.setTextColor(Color.BLACK);
+//            holder.tv_nhacc.setTextColor(Color.BLACK);
         }
         holder.imgdel.setOnClickListener(new View.OnClickListener() {
             @Override

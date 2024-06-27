@@ -45,6 +45,7 @@ public class QuanlyspFragment extends Fragment {
     SpViewModel model;
     Sp_Adapter adapter;
     SearchView searchView;
+    ArrayList<SanPham> list;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -63,13 +64,14 @@ public class QuanlyspFragment extends Fragment {
         model.getLiveData().observe(getViewLifecycleOwner(), new Observer<List<SanPham>>() {
             @Override
             public void onChanged(List<SanPham> saches) {
-                adapter = new Sp_Adapter(getActivity(), saches, dao);
+                adapter = new Sp_Adapter(getActivity(), saches, dao, 0);
                 rcl_sp.setAdapter(adapter);
 //                rcl_sach.setItemAnimator(new ScaleInAnimator());
 //        //        adapter = new StudentAdapter(students, this);
 //              rcl_sach.setAdapter(new ScaleInAnimationAdapter(adapter));
             }
         });
+
         searchView = view.findViewById(R.id.id_serch);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

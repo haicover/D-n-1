@@ -48,5 +48,9 @@
         android:name="com.example.myapplicationduan1.Login.DoiPass"
         android:label="Đổi Mật Khẩu"
         tools:layout="@layout/doipass_fragment" />
+    <fragment
+        android:id="@+id/nav_QuanLyCart"
+        android:name="com.example.myapplicationduan1.QuanlyvsThongke.CartFragment"
+        android:label="Giỏ hàng" />
 
 </navigation>

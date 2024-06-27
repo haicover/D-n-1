@@ -1,67 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DesignSurface">
-    <option name="filePathToZoomLevelMap">
-      <map>
-        <entry key="..\:/MyApplicationDuAn1/MyApplicationDuAn1/app/src/main/res/drawable-v24/ic_administrator.xml" value="0.26614583333333336" />
-        <entry key="..\:/MyApplicationDuAn1/MyApplicationDuAn1/app/src/main/res/layout/activity_manhinh_home.xml" value="0.25" />
-        <entry key="..\:/MyApplicationDuAn1/MyApplicationDuAn1/app/src/main/res/layout/custom_add_sp.xml" value="0.25" />
-        <entry key="..\:/MyApplicationDuAn1/MyApplicationDuAn1/app/src/main/res/layout/login_activity.xml" value="0.1" />
-        <entry key="..\:/MyApplicationDuAn1/MyApplicationDuAn1/app/src/main/res/layout/nav_header_main.xml" value="0.25" />
-        <entry key="..\:/MyApplicationDuAn1/MyApplicationDuAn1/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
-        <entry key="..\:/MyApplicationDuAn1/MyApplicationDuAn1/app/src/main/res/menu/main.xml" value="0.25" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/activity_main.xml" value="0.4296875" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/activity_manhinh_home.xml" value="0.4296875" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/activity_splash.xml" value="0.4296875" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/app_bar_main.xml" value="0.4296875" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/content_main.xml" value="0.4296875" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/custom_add_loaisp.xml" value="0.24791666666666667" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/custom_add_phieumua.xml" value="0.4296875" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/custom_add_sp.xml" value="0.4296875" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/fragment_phieumua.xml" value="0.4296875" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/login_activity.xml" value="0.4296875" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/nav_header_main.xml" value="0.4296875" />
-        <entry key="..\:/MyApplicationDuAn1/app/src/main/res/layout/singup_activity.xml" value="0.4296875" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/drawable-v24/ic_library.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/activity_manhinh_home.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/activity_splash.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/app_bar_main.xml" value="0.1685185185185185" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/content_main.xml" value="0.1685185185185185" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_add_loaisp.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_add_phieumua.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_add_sp.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_addkhachhang.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_edit_loaisp.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_edit_phieumua.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_edit_sp.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_list_khachhang.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_list_loaisp.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_list_phieumua.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_list_sp.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_list_thongke.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_list_tk.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_spiner_khachhang.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_spiner_loaisp.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_spiner_sp.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_taonv.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/custom_update_kh.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/doipass_fragment.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/frag_loaisp.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/fragment_phieumua.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/fragment_quanlykhachhang.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/fragment_sp.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/fragment_thongkedoanhthu.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/fragment_thongketo5.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/login_activity.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/nav_header_main.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/layout/singup_activity.xml" value="0.1" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/menu/activity_main_drawer.xml" value="0.1360544217687075" />
-        <entry key="..\:/Users/luonglinh/AndroidStudioProjects/MyApplicationDuAn1/app/src/main/res/menu/main.xml" value="0.1" />
-      </map>
-    </option>
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

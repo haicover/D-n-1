@@ -43,8 +43,20 @@ public class CreateData extends SQLiteOpenHelper {
                         "tenSp TEXT NOT NULL, " +
                         "giaThue INTEGER NOT NULL, " +
                         "nsx TEXT NOT NULL, " +
+                        "soLuong INTEGER NOT NULL, " +
                         "maLoai INTEGER REFERENCES LoaiSanPham(maLoai))";
         db.execSQL(tb_S);
+        //Bảng giỏ hàng
+        String tb_cart =
+                "create table GioHangSanPham (" +
+                        "maSp INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                        "tenSp TEXT NOT NULL, " +
+                        "giaThue INTEGER NOT NULL, " +
+                        "nsx TEXT NOT NULL, " +
+                        "soLuong INTEGER NOT NULL, " +
+                        "maLoai INTEGER REFERENCES LoaiSanPham(maLoai))";
+        db.execSQL(tb_cart);
+
         //Bảng Phiếu Mua
         String tb_pm =
                 "create table PhieuMua (" +
@@ -70,6 +82,8 @@ public class CreateData extends SQLiteOpenHelper {
         db.execSQL(dropTableLoaiSp);
         String dropTableSp = "drop table if exists SanPham";
         db.execSQL(dropTableSp);
+        String dropTableCart = "drop table if exists GioHangSanPhamGioHangSanPham";
+        db.execSQL(dropTableCart);
         String dropTablePhieuMua = "drop table if exists PhieuMua";
         db.execSQL(dropTablePhieuMua);
 

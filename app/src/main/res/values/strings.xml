@@ -3,15 +3,17 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Siêu thị MiMi</string>
+    <string name="nav_header_title">Ứng dụng quản lý siêu thị HCH</string>
     <string name="nav_header_subtitle">Xin chào quý khách hàng</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Quản Lý Sản Phẩm</string>
-    <string name="menu_gallery">Quản Lý Thể Loại Sản Phẩm</string>
-    <string name="menu_slideshow">Quản Lý Khách hàng</string>
-    <string name="menu_Phieu">Quản Lý Phiếu Mua</string>
+    <string name="menu_gallery">Quản Lý Loại Sản Phẩm </string>
+    <string name="menu_slideshow">Quản Lý Khách Hàng</string>
+    <string name="menu_Phieu">Quản Lý Hóa đơn</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_cart">Giỏ Hàng\n</string>
+    <string name="thanh_toan">Thanh Toán</string>
 </resources>

@@ -10,7 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationDuAn1">
         <activity
+            android:name=".Login.Sign"
+            android:exported="false" />
+
+        <activity
+            android:name=".Login.Register"
+            android:exported="false" />
+
+        <activity
             android:name=".Splash"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".ManhinhHome"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,22 +32,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ManhinhHome"
-            android:exported="true" >
-        </activity>
+
 
         <activity
             android:name=".Login.Login"
-            android:exported="true" >
+            android:exported="true" />
 
-        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.MyApplicationDuAn1.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.MyApplicationDuAn1.NoActionBar" />
     </application>
 
 </manifest>

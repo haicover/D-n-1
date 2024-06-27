@@ -43,7 +43,7 @@
             android:id="@+id/imgdells"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -54,7 +54,9 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgdells"
             app:srcCompat="@drawable/ic_pencil" />

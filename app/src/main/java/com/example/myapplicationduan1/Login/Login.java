@@ -2,10 +2,13 @@ package com.example.myapplicationduan1.Login;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +25,7 @@ public class Login extends AppCompatActivity {
     Intent intent;
     NVDao nvdao;
     CheckBox chk_remember;
+    TextView tv_forgot,tv_sign;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,52 @@ public class Login extends AppCompatActivity {
         ed_user = findViewById(R.id.ed_user);
         ed_pass = findViewById(R.id.ed_pass);
         chk_remember = findViewById(R.id.chk_remember);
+        tv_forgot = findViewById(R.id.tv_forgot);
+        tv_sign = findViewById(R.id.tv_sign);
+        tv_sign.setPaintFlags(tv_sign.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        tv_sign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login.this, Sign.class));
+                finish();
+            }
+        });
+        nvdao = new NVDao(this);
+        ed_user = findViewById(R.id.ed_user);
+        ed_pass = findViewById(R.id.ed_pass);
+
+        // Xử lý sự kiện khi nhấn nút đăng nhập
+        Button btn_login = findViewById(R.id.login_btn);
+//        btn_login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String user = ed_user.getText().toString();
+//                String pass = ed_pass.getText().toString();
+//
+//                if (!user.isEmpty() && !pass.isEmpty()) {
+//                    if (nvdao.getlogin(user, pass) > 0) {
+//                        // Xử lý đăng nhập thành công
+//                        // Chuyển sang activity Main hoặc AdminActivity tùy vào quyền truy cập
+//                        Intent intent = new Intent(Login.this, MainActivity.class);
+//                        intent.putExtra("admintion", user);
+//                        startActivity(intent);
+//                        finish();
+//                    } else {
+//                        // Đăng nhập thất bại
+//                        Toast.makeText(Login.this, "Đăng nhập thất bại!", Toast.LENGTH_SHORT).show();
+//                    }
+//                } else {
+//                    // Thông báo nếu username hoặc password trống
+//                    Toast.makeText(Login.this, "Vui lòng nhập tên đăng nhập và mật khẩu!", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
+//        btn_clear.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finishAffinity();
+//            }
+//        });
         nvdao = new NVDao(this);
 //        NhanVien nhanVien = nvdao.getUser("admin");
         nvdao.OPEN();

@@ -14,6 +14,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -137,7 +138,7 @@ public class PhieumuaFragment extends Fragment {
                 builder.setView(view1);
 
                 EditText ed_ngaymuon = (EditText) view1.findViewById(R.id.ed_ngaymuon);
-                EditText ed_tienthue = (EditText) view1.findViewById(R.id.ed_giamuon);
+                TextView ed_tienthue = (TextView) view1.findViewById(R.id.ed_giamuon);
                 Spinner spn_tv = (Spinner) view1.findViewById(R.id.spinnertv);
                 Spinner spn_sach = (Spinner) view1.findViewById(R.id.spinnersach);
                 ImageView img_date = (ImageView) view1.findViewById(R.id.img_lich);
@@ -173,6 +174,7 @@ public class PhieumuaFragment extends Fragment {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         maSp = spArrayList.get(position).getMasp();
+                        ed_tienthue.setText(String.valueOf(spArrayList.get(position).getGiasp()));
                         Toast.makeText(getActivity(), "Chọn sản phẩm: " + spArrayList.get(position).getTensp(), Toast.LENGTH_SHORT).show();
                     }
 
@@ -261,7 +263,7 @@ public class PhieumuaFragment extends Fragment {
         return date != null;
     }
 
-    public boolean checkgiatien(EditText ed) {
+    public boolean checkgiatien(TextView ed) {
         boolean check = true;
         try {
             Integer.parseInt(ed.getText().toString());

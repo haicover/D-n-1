@@ -73,7 +73,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:drawableLeft="@drawable/ic_money"
+        android:drawableLeft="@drawable/ic_money2"
         android:drawablePadding="12dp"
         android:ems="10"
         android:hint="Giá thuế sản phẩm"

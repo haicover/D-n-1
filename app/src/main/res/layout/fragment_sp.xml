@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".QuanlyvsThongke.QuanlyspFragment">
+    android:background="@drawable/logo_thietke4"
+    tools:context=".QuanlyvsThongke.QuanlyspFragment"
+    android:layout_margin="10dp">
 
     <SearchView
         android:id="@+id/id_serch"
@@ -24,18 +26,20 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_serch" />
+        app:layout_constraintTop_toBottomOf="@+id/id_serch"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fbl_ads"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="260dp"
-        android:layout_marginBottom="32dp"
-        android:src="@drawable/ic_baseline_add_book_24"
+        android:layout_marginStart="300dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

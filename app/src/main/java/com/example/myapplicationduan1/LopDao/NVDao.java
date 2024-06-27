@@ -106,4 +106,12 @@ public class NVDao {
             return 1;
         }
     }
+    public void Sign(String maNV, String hoTen, String matKhau) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("maNV", maNV);
+        contentValues.put("hoTen", hoTen);
+        contentValues.put("matKhau", matKhau);
+        sqlite.insert("NhanVien", null, contentValues);
+        sqlite.close();
+    }
 }

@@ -3,6 +3,7 @@ package com.example.myapplicationduan1.LopAdapter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,12 +42,14 @@ public class Sp_Adapter extends RecyclerView.Adapter<Sp_Adapter.SpHoder> impleme
     ArrayList<LoaiSanpham> loaiSpches;
     LoaispDao loaispDao;
     List<SanPham> mlistOld;
+    int typeLoad;
 
-    public Sp_Adapter(Context context, List<SanPham> list, SanphamDao dao){
+    public Sp_Adapter(Context context, List<SanPham> list, SanphamDao dao, int typeLoad) {
         this.context = context;
         this.list = list;
         this.dao = dao;
         this.mlistOld = list;
+        this.typeLoad = typeLoad;
     }
 
     @Override
@@ -60,10 +63,9 @@ public class Sp_Adapter extends RecyclerView.Adapter<Sp_Adapter.SpHoder> impleme
                 } else {
                     List<SanPham> listtv = new ArrayList<>();
                     for (SanPham sanPham : mlistOld) {
-                        if (sanPham.getNsx().toLowerCase().contains(strSearch.toLowerCase())) {
+                        if (String.valueOf(sanPham.getMasp()).contains(strSearch)) {
                             listtv.add(sanPham);
                         }
-                        ;
                     }
                     list = listtv;
                 }
@@ -93,6 +95,15 @@ public class Sp_Adapter extends RecyclerView.Adapter<Sp_Adapter.SpHoder> impleme
         if (sanPham == null) {
             return;
         } else {
+
+            if (typeLoad == 1) {
+                holder.img_add.setVisibility(View.GONE);
+                holder.img_edits.setVisibility(View.GONE);
+                holder.tv_ms.setVisibility(View.GONE);
+            } else {
+                holder.tv_total.setVisibility(View.GONE);
+            }
+
             String tenLoai;
             try {
                 LoaispDao loaiSpDao = new LoaispDao(context);
@@ -106,6 +117,7 @@ public class Sp_Adapter extends RecyclerView.Adapter<Sp_Adapter.SpHoder> impleme
             holder.tv_mls.setText("Loại Sản phẩm: " + tenLoai);
             holder.tv_tens.setText("Tên Sản phẩm: " + sanPham.getTensp());
             holder.tv_nsx.setText("NSX: " + sanPham.getNsx());
+            holder.tv_total.setText("Số lượng: " + sanPham.getSoLuong());
             Locale locale = new Locale("nv", "VN");
             NumberFormat numberFormat = NumberFormat.getCurrencyInstance(locale);
             String tien = numberFormat.format(sanPham.getGiasp());
@@ -123,10 +135,19 @@ public class Sp_Adapter extends RecyclerView.Adapter<Sp_Adapter.SpHoder> impleme
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dao = new SanphamDao(context);
-                        long kq = dao.DELETES(sanPham);
+                        long kq = 0;
+                        if (typeLoad == 1) {
+                            kq = dao.DeleteCart(sanPham);
+                        } else {
+                            kq = dao.DELETES(sanPham);
+                        }
                         if (kq > 0) {
                             list.clear();
-                            list.addAll(dao.GETS());
+                            if (typeLoad == 1) {
+                                list.addAll(dao.GetDataCart());
+                            } else {
+                                list.addAll(dao.GETS());
+                            }
                             Toast.makeText(context.getApplicationContext(), "Xóa Thành Công", Toast.LENGTH_SHORT).show();
                             notifyDataSetChanged();
                             dialog.cancel();
@@ -223,6 +244,19 @@ public class Sp_Adapter extends RecyclerView.Adapter<Sp_Adapter.SpHoder> impleme
                 builder.create().show();
             }
         });
+
+        holder.img_add.setOnClickListener(v -> {
+            dao = new SanphamDao(context);
+            long kq;
+            if (dao.isTableExist(sanPham)) {
+                kq = dao.updateCart(sanPham);
+            } else {
+                kq = dao.AddCarts(sanPham);
+            }
+            if (kq > 0) {
+                Toast.makeText(context.getApplicationContext(), "Thêm vào giỏ hành thành công", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -233,19 +267,22 @@ public class Sp_Adapter extends RecyclerView.Adapter<Sp_Adapter.SpHoder> impleme
         return 0;
     }
 
-    public class SpHoder extends RecyclerView.ViewHolder{
-        TextView tv_ms, tv_mls, tv_tens, tv_gias, tv_nsx;
-        ImageView img_dels, img_edits;
+    public class SpHoder extends RecyclerView.ViewHolder {
+        TextView tv_ms, tv_mls, tv_tens, tv_gias, tv_nsx, tv_total;
+        ImageView img_dels, img_edits, img_add;
         ConstraintLayout cns_lays;
+
         public SpHoder(@NonNull View itemView) {
             super(itemView);
             tv_ms = itemView.findViewById(R.id.tv_masach);
+            tv_total = itemView.findViewById(R.id.tv_total);
             tv_mls = itemView.findViewById(R.id.tv_maloais);
             tv_tens = itemView.findViewById(R.id.tv_tensach);
             tv_gias = itemView.findViewById(R.id.tv_giasach);
             tv_nsx = itemView.findViewById(R.id.tv_tacgia);
             img_dels = itemView.findViewById(R.id.img_deltsach);
             img_edits = itemView.findViewById(R.id.img_editsach);
+            img_add = itemView.findViewById(R.id.img_add_sp);
             cns_lays = itemView.findViewById(R.id.conss);
             Animation animation = AnimationUtils.loadAnimation(context, R.anim.transition);
             cns_lays.setAnimation(animation);

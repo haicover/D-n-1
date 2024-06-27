@@ -10,6 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:lottie_autoPlay="true"
-        android:background="@drawable/img"/>
+        android:background="@drawable/logo_app_thietke"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

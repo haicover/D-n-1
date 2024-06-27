@@ -6,11 +6,11 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/book"
+            android:icon="@drawable/hanghoa"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/booktl"
+            android:icon="@drawable/ic_book"
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/nav_slideshow"
@@ -20,6 +20,10 @@
             android:id="@+id/nav_Quanlyphieu"
             android:icon="@drawable/receipt"
             android:title="@string/menu_Phieu" />
+        <item
+            android:id="@+id/nav_QuanLyCart"
+            android:icon="@drawable/bill"
+            android:title="@string/menu_cart" />
     </group>
     <item android:title="Thống Kê">
         <menu>
@@ -27,7 +31,7 @@
                 <item
                     android:id="@+id/nav_top10"
                     android:icon="@drawable/top10"
-                    android:title="Thống kê top 10 sách mượn" />
+                    android:title="Thống kê top 5 sản phẩm mua nhiều nhất" />
                 <item
                     android:id="@+id/nav_tong"
                     android:icon="@drawable/tog"

@@ -5,17 +5,27 @@ public class SanPham {
     String tensp;
     int giasp;
     int malsp;
+    int soLuong;
     String nsx;
 
     public SanPham() {
     }
 
-    public SanPham(int masp, String tensp, int giasp, int malsp, String nsx) {
+    public SanPham(int masp, String tensp, int giasp, int malsp, String nsx, int soLuong) {
         this.masp = masp;
         this.tensp = tensp;
         this.giasp = giasp;
         this.malsp = malsp;
         this.nsx = nsx;
+        this.soLuong = soLuong;
+    }
+
+    public int getSoLuong() {
+        return soLuong;
+    }
+
+    public void setSoLuong(int soLuong) {
+        this.soLuong = soLuong;
     }
 
     public int getMasp() {
@@ -59,9 +69,11 @@ public class SanPham {
     }
 
     public static final String TB_NAME = "SanPham";
+    public static final String TB_NAME_CART = "GioHangSanPham";
     public static final String COL_NAME_MASP = "maSp";
     public static final String COL_NAME_NSX = "nsx";
     public static final String COL_NAME_TENSP = "tenSp";
     public static final String COL_NAME_GIASP = "giaThue";
     public static final String COL_NAME_MALSP = "maLoai";
+    public static final String COL_SL = "soLuong";
 }

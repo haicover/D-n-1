@@ -53,10 +53,9 @@ public class KH_Adapter extends RecyclerView.Adapter<KH_Adapter.khhoder> impleme
                 } else {
                     List<KhachHang> listtv = new ArrayList<>();
                     for (KhachHang khachHang : mlistOld) {
-                        if (khachHang.getHoTenTV().toLowerCase().contains(strSearch.toLowerCase())) {
+                        if (String.valueOf(khachHang.getIDTV()).contains(strSearch)) {
                             listtv.add(khachHang);
                         }
-                        ;
                     }
                     list = listtv;
                 }
@@ -92,15 +91,15 @@ public class KH_Adapter extends RecyclerView.Adapter<KH_Adapter.khhoder> impleme
             holder.tv_hoten.setText("Họ Và Tên: " + khachHang.getHoTenTV());
             holder.tv_namsinh.setText("Năm Sinh: " + khachHang.getNamsinhTV());
         }
-        if (position % 2 == 1 || position % 2 != 0) {
-            holder.tv_maTV.setTextColor(Color.GREEN);
-            holder.tv_hoten.setTextColor(Color.GREEN);
-            holder.tv_namsinh.setTextColor(Color.GREEN);
-        } else {
-            holder.tv_maTV.setTextColor(Color.RED);
-            holder.tv_hoten.setTextColor(Color.RED);
-            holder.tv_namsinh.setTextColor(Color.RED);
-        }
+//        if (position % 2 == 1 || position % 2 != 0) {
+//            holder.tv_maTV.setTextColor(Color.GREEN);
+//            holder.tv_hoten.setTextColor(Color.GREEN);
+//            holder.tv_namsinh.setTextColor(Color.GREEN);
+//        } else {
+//            holder.tv_maTV.setTextColor(Color.RED);
+//            holder.tv_hoten.setTextColor(Color.RED);
+//            holder.tv_namsinh.setTextColor(Color.RED);
+//        }
 
         holder.img_dele.setOnClickListener(new View.OnClickListener() {
             @Override
